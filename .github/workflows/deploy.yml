@@ -16,12 +16,12 @@ jobs:
      - name: Configurar node
        uses: action/setup-node@v3
        with:
-          node-version: 18
+          node-version: 20
           - run: npm install
           - run: npm test
 
           - name: Deplegar en GitHub Pages
-            uses: peaceIris/action-gh-pages@v3
+            uses: peaceIris/actions-gh-pages@v3
             with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
               publish_dir: ./
